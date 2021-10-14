@@ -1,0 +1,57 @@
+@font-face {
+	font-family: "FONTNAME";
+	src: url("../fonts/FONTFILENAME.woff2") format("woff2"),
+		url("../fonts/FONTFILENAME.woff");
+}
+@font-face {
+	font-family: "FONTNAME";
+	src: url("../fonts/FONTFILENAME.woff2") format("woff2"),
+		url("../fonts/FONTFILENAME.woff");
+	font-style: italic;
+}
+@mixin typeBase {
+	font-weight: normal;
+	font-size: 18px;
+}
+@mixin title {
+	font-weight: normal;
+	font-size: 19px;
+	letter-spacing: 0.015em;
+	word-spacing: -0.03em;
+	font-variant: small-caps;
+	@media (max-width: 767px) {
+		font-size: 17px;
+	}
+}
+@mixin headline {
+	font-weight: normal;
+	font-size: 21px;
+	letter-spacing: 0.015em;
+	word-spacing: -0.03em;
+	font-variant: small-caps;
+}
+@mixin titleDisplay {
+	font-size: 54px;
+	line-height: 0.8;
+	// letter-spacing: -0.05em;
+	font-variant: normal;
+}
+
+@mixin textInput {
+	font-family: "FONTNAME";
+	font-size: 22px;
+	font-style: italic;
+	border-radius: 0;
+	&::-webkit-input-placeholder {
+		/* Chrome/Opera/Safari */
+		color: #000;
+	}
+	&::-moz-placeholder {
+		/* Firefox 19+ */
+		color: #000;
+	}
+	&:-ms-input-placeholder {
+		/* IE 10+ */
+		color: #000;
+	}
+}
